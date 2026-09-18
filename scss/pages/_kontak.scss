@@ -1,0 +1,14 @@
+// =========================================
+// PAGES / KONTAK
+// =========================================
+
+@use "../abstracts/mixins" as m;
+
+.contact-card {
+    @include m.card-base(var(--spacing-8)); // 30px -> 32px
+
+    > p {
+        margin-bottom: var(--spacing-6); // 22px -> 24px
+        color: var(--muted-color);
+    }
+}

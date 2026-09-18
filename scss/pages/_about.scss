@@ -1,0 +1,46 @@
+// =========================================
+// PAGES / TENTANG SAYA
+// =========================================
+
+@use "../abstracts/mixins" as m;
+
+.about {
+    @include m.flex($align: center, $gap: var(--spacing-9)); // 35px -> 36px
+    @include m.card-base(var(--spacing-8)); // 30px -> 32px
+
+    figure {
+        flex: 0 0 280px;
+        text-align: center;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            height: 280px;
+            object-fit: cover;
+            margin: 0 auto var(--spacing-3); // 10px -> 12px
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+        }
+
+        figcaption {
+            color: var(--muted-color);
+            font-size: 0.9rem;
+        }
+    }
+
+    h3 {
+        margin-bottom: var(--spacing-3); // 12px
+        color: var(--primary-color);
+        font-size: 1.35rem;
+    }
+
+    @include m.respond-to(tablet) {
+        flex-direction: column;
+        text-align: center;
+
+        figure {
+            flex-basis: auto;
+        }
+    }
+}

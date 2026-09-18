@@ -1,0 +1,31 @@
+// =========================================
+// THEMES / DARK MODE
+// Override CSS custom properties saat
+// prefers-color-scheme: dark, dibangkitkan
+// dari map $colors-dark memakai @each.
+// =========================================
+
+@use "../abstracts/variables" as v;
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @each $name, $value in v.$colors-dark {
+            --#{$name}: #{$value};
+        }
+        --shadow: #{v.$shadow-dark};
+    }
+
+    nav {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    #pendidikan h5 {
+        background: #0f172a;
+    }
+
+    input,
+    textarea {
+        background: #0f172a;
+        color: var(--text-color);
+    }
+}

@@ -1,0 +1,8 @@
+// =========================================
+// LAYOUT / CONTAINER
+// =========================================
+
+.container {
+    width: min(92%, var(--max-width));
+    margin-inline: auto;
+}

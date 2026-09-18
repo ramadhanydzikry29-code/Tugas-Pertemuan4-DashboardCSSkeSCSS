@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Pribadi - Dzikry</title>
+    <meta name="description" content="Landing page pribadi yang berisi informasi tentang diri, hobi, pendidikan, dan kontak.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Profil Pribadi - Dzikry">
+    <meta property="og:description" content="Landing page pribadi Dzikry menggunakan HTML5 semantik.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Dzikry</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Navigasi utama">
+        <div class="container">
+            <ul>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#hobi">Hobi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Tentang Saya -->
+        <section id="tentang" class="container">
+            <h2>Tentang Saya</h2>
+
+            <article class="about">
+                <figure>
+                    <img
+                        src="profil.jpeg"
+                        width="350"
+                    >
+                    <figcaption>Profil Saya</figcaption>
+                </figure>
+
+                <div>
+                    <h3>Halo semuanya, saya Dzikry Ramadhany</h3>
+
+                    <p>
+                        Saya adalah seorang mahasiswa yang sedang menempuh pendidikan di Program Studi Ilmu Komputer. Saya memiliki ketertarikan pada dunia teknologi, khususnya dalam pengembangan website dan cyber scurity. Saat ini saya sedang mengembangkan kemampuan dalam HTML. Saya senang mempelajari hal-hal baru, mengerjakan berbagai project, dan terus meningkatkan kemampuan saya di bidang teknologi. Ke depannya, saya ingin menjadi seseorang yang memiliki kemampuan di bidang pengembangan website dan pengamanan data serta dapat menghasilkan karya yang bermanfaat.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Pendidikan -->
+        <section id="pendidikan" class="container">
+            <h2>Pendidikan</h2>
+
+            <article class="card">
+                <h5>UNIVERSITAS NEGRI MEDAN - ILMU KOMPUTER (NEW)</h5>
+                <h5>MAS AL WASHLIYAH 49 PASAR LEMBU - IPA (2022-2025)</h5>
+                <h5>MTS 63 PUNGGULAN (2019-2022)</h5>
+                <h5>SDN 32 PUNGGULAN (2014-2019)</h5>
+                <h5>TK BUNDA AIR JOMAN (2013-2014)</h5>
+            </article>
+        </section>
+
+        <!-- Hobi -->
+        <section id="hobi" class="container">
+            <h2>Hobi</h2>
+
+            <div class="hobby-list">
+
+                <article class="card">
+                    <h3>💻 Pemrograman & Scurity </h3>
+                    <p>
+                        Saya tertarik mempelajari HTML,CSS,Cyber Scurity dan teknologi lainnya
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>🎮 Gaming</h3>
+                    <p>
+                        Bermain game menjadi salah satu aktivitas yang saya
+                        lakukan untuk bersantai di waktu luang contohnya seperti game FIRE FIRE,MOBILE LEGEND,PUBG,WUTHRNG WAVES dan game tier atas lainnya
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>🎵 Musik</h3>
+                    <p>
+                        Mendengarkan musik membantu saya lebih rileks ketika
+                        belajar atau mengerjakan tugas khususnya lagu Pop.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Aside -->
+        <aside class="container">
+            <h2>Fakta Singkat</h2>
+
+            <ul>
+                <li>Disiplin.</li>
+                <li>Olahraga.</li>
+                <li>Tertarik dengan hal hal baru.</li>
+            </ul>
+        </aside>
+
+        <!-- Kontak -->
+        <section id="kontak" class="container">
+            <h2>Hubungi Saya</h2>
+
+            <article class="contact-card">
+
+                <p>
+                    Jika ingin menghubungi saya, silakan isi formulir
+                    berikut.
+                </p>
+
+                <form action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input
+                            type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder="Masukkan nama Anda"
+                            required
+                            minlength="3"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="contoh@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea
+                            id="pesan"
+                            name="pesan"
+                            rows="5"
+                            placeholder="Tulis pesan Anda..."
+                            required
+                            minlength="10"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit">Kirim Pesan</button>
+
+                </form>
+
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; <time datetime="2026">2026</time> Dzikry.
+                Semua hak dilindungi.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

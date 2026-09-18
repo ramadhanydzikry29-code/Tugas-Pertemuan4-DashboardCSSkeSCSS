@@ -1,0 +1,39 @@
+// =========================================
+// PAGES / HOBI
+// =========================================
+
+@use "sass:map";
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.hobby-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-5); // 20px
+
+    .card {
+        @include m.hover-lift();
+        border-top: 4px solid transparent;
+    }
+
+    h3 {
+        margin-bottom: var(--spacing-2); // 10px -> 8px
+        color: var(--primary-color);
+    }
+
+    // ---- LOOP @each: beri warna aksen border-top berbeda
+    // untuk tiap kartu hobi berdasarkan map $hobby-accents ----
+    @each $index, $accent in v.$hobby-accents {
+        .card:nth-child(#{$index}) {
+            @if map.has-key(v.$colors, $accent) {
+                border-top-color: var(--#{$accent});
+            } @else {
+                border-top-color: $accent;
+            }
+        }
+    }
+
+    @include m.respond-to(tablet) {
+        grid-template-columns: 1fr;
+    }
+}

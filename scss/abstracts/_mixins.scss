@@ -1,0 +1,58 @@
+// =========================================
+// ABSTRACTS / MIXINS
+// Kumpulan mixin reusable dipakai di seluruh
+// partial layout/components/pages.
+// =========================================
+
+@use "sass:map";
+@use "variables" as v;
+
+// ---------- Mixin 1: Responsive breakpoint ----------
+// Membungkus media query berdasarkan map $breakpoints
+// supaya nama breakpoint konsisten di semua file.
+@mixin respond-to($breakpoint) {
+    @if map.has-key(v.$breakpoints, $breakpoint) {
+        @media (max-width: #{map.get(v.$breakpoints, $breakpoint)}) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint `#{$breakpoint}` tidak terdaftar di $breakpoints.";
+    }
+}
+
+// ---------- Mixin 2: Flexbox shortcut ----------
+// Dipakai di header, nav, .about, main dsb agar
+// deklarasi flex tidak diulang-ulang.
+@mixin flex($direction: row, $align: center, $justify: center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+
+    @if $gap != 0 {
+        gap: $gap;
+    }
+}
+
+// ---------- Mixin 3: Kartu dasar (card) ----------
+// Dipakai oleh .card, .contact-card, .about, dsb
+// supaya tampilan kartu konsisten.
+@mixin card-base($padding: var(--spacing-6)) {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: $padding;
+}
+
+// ---------- Mixin 4: Efek hover terangkat ----------
+// Dipakai oleh hobby card & tombol untuk efek
+// translateY + shadow saat hover.
+@mixin hover-lift($distance: -5px, $duration: 0.2s) {
+    transition: transform $duration ease, box-shadow $duration ease;
+
+    &:hover {
+        transform: translateY($distance);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    }
+}

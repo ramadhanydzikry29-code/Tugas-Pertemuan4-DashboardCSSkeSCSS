@@ -1,0 +1,13 @@
+{
+  "name": "tugasweb-pertemuan2-dashboard",
+  "version": "1.0.0",
+  "description": "Portofolio pribadi - konversi CSS ke SCSS (struktur modular 7-1 pattern)",
+  "scripts": {
+    "build": "sass scss/main.scss style.css --no-source-map --style=expanded",
+    "watch": "sass scss/main.scss style.css --no-source-map --watch",
+    "build:min": "sass scss/main.scss style.css --no-source-map --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.104.1"
+  }
+}

@@ -1,0 +1,26 @@
+// =========================================
+// COMPONENTS / BUTTONS
+// =========================================
+
+@use "../abstracts/mixins" as m;
+
+button {
+    width: fit-content;
+    padding: var(--spacing-3) var(--spacing-6); // 12px 24px
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    background: var(--primary-color);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    @include m.hover-lift($distance: -2px);
+
+    &:hover {
+        background: #1d4ed8;
+    }
+
+    @include m.respond-to(mobile) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+// =========================================
+// LAYOUT / HEADER
+// =========================================
+
+@use "../abstracts/mixins" as m;
+
+header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: #ffffff;
+    padding: var(--spacing-12) 0; // 48px, mendekati 45px asli
+
+    .container {
+        @include m.flex($justify: center);
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        letter-spacing: 2px;
+    }
+}

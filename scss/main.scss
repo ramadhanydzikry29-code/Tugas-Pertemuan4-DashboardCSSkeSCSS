@@ -1,0 +1,39 @@
+// =========================================
+// MAIN.SCSS - Entry Point
+// CSS Layouting Portofolio - Dzikry
+// Struktur modular 7-1 pattern, dikompilasi
+// dengan Dart Sass / Vite. Memakai @use
+// (bukan @import) di seluruh partial.
+// =========================================
+
+// 1. Abstracts (variables & mixins - tidak menghasilkan CSS langsung)
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+// 2. Base (reset & root custom properties)
+@use "base/reset";
+@use "base/root";
+
+// 3. Layout (struktur halaman)
+@use "layout/container";
+@use "layout/header";
+@use "layout/nav";
+@use "layout/main";
+@use "layout/footer";
+
+// 4. Components (elemen reusable)
+@use "components/card";
+@use "components/buttons";
+@use "components/form";
+
+// 5. Pages (section spesifik halaman)
+@use "pages/about";
+@use "pages/pendidikan";
+@use "pages/hobby";
+@use "pages/aside";
+@use "pages/kontak";
+
+// 6. Themes (dark mode)
+@use "themes/dark";
+
+// 7. Vendors -> (tidak dipakai, tidak ada library CSS pihak ketiga)

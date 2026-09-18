@@ -1,0 +1,15 @@
+// =========================================
+// LAYOUT / FOOTER
+// =========================================
+
+footer {
+    margin-top: var(--spacing-5); // 20px
+    padding: var(--spacing-6) 0; // 25px -> 24px
+    text-align: center;
+    color: #ffffff;
+    background: var(--secondary-color);
+
+    p {
+        font-size: 0.9rem;
+    }
+}

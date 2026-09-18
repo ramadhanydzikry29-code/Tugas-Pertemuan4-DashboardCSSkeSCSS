@@ -1,0 +1,60 @@
+// =========================================
+// ABSTRACTS / VARIABLES
+// Semua design token (warna, spacing, radius,
+// breakpoint) didefinisikan di sini sebagai
+// SCSS variables & maps. Tidak ada CSS output
+// langsung di file ini.
+// =========================================
+
+// ---------- Colors (Light / Default) ----------
+// Key map sengaja disamakan dengan nama custom
+// property CSS target (mis. primary-color -> --primary-color)
+$colors: (
+    primary-color: #2563eb,
+    secondary-color: #0f172a,
+    accent-color: #38bdf8,
+    background-color: #f1f5f9,
+    card-color: #ffffff,
+    text-color: #1e293b,
+    muted-color: #64748b,
+    border-color: #e2e8f0,
+);
+
+// ---------- Colors (Dark Mode override) ----------
+$colors-dark: (
+    background-color: #0f172a,
+    card-color: #1e293b,
+    text-color: #e2e8f0,
+    muted-color: #94a3b8,
+    border-color: #334155,
+    secondary-color: #020617,
+);
+
+// ---------- Shadow ----------
+$shadow-light: 0 8px 25px rgba(15, 23, 42, 0.08);
+$shadow-dark: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+// ---------- Radius & Layout ----------
+$radius: 14px;
+$max-width: 1100px;
+
+// ---------- Spacing scale ----------
+// Skala spasi dibangkitkan otomatis (lihat base/_root.scss
+// yang memakai @for) dari satuan dasar 4px:
+// --spacing-1 = 4px, --spacing-2 = 8px, ... --spacing-12 = 48px
+$spacing-unit: 4px;
+$spacing-steps: 12;
+
+// ---------- Breakpoints ----------
+$breakpoints: (
+    tablet: 768px,
+    mobile: 480px,
+);
+
+// ---------- Aksen warna per kartu hobi ----------
+// dipakai oleh loop @each di pages/_hobby.scss
+$hobby-accents: (
+    1: primary-color,
+    2: accent-color,
+    3: #f59e0b,
+);

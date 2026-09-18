@@ -1,0 +1,22 @@
+// =========================================
+// PAGES / ASIDE (FAKTA SINGKAT)
+// =========================================
+
+aside {
+    background: var(--secondary-color);
+    color: #ffffff;
+    padding: var(--spacing-7); // 28px
+    border-radius: var(--radius);
+
+    h2 {
+        color: #ffffff;
+    }
+
+    ul {
+        padding-left: var(--spacing-5); // 20px
+
+        li {
+            margin: var(--spacing-2) 0; // 6px -> 8px
+        }
+    }
+}

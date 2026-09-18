@@ -1,0 +1,20 @@
+// =========================================
+// LAYOUT / MAIN
+// =========================================
+
+main {
+    display: grid;
+    gap: var(--spacing-7); // 28px
+    padding: var(--spacing-10) 0; // 40px
+}
+
+section,
+aside {
+    scroll-margin-top: 80px;
+
+    h2 {
+        margin-bottom: var(--spacing-5); // 18px -> 20px
+        color: var(--secondary-color);
+        font-size: 1.7rem;
+    }
+}

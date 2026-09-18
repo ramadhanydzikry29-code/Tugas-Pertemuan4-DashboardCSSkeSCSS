@@ -1,0 +1,27 @@
+// =========================================
+// BASE / ROOT
+// Membangkitkan CSS Custom Properties (:root)
+// dari SCSS variables & maps di abstracts/_variables
+// menggunakan loop @each dan @for.
+// =========================================
+
+@use "../abstracts/variables" as v;
+
+:root {
+    // ---- LOOP @each: bangkitkan --primary-color, --secondary-color, dst
+    // dari map $colors ----
+    @each $name, $value in v.$colors {
+        --#{$name}: #{$value};
+    }
+
+    // ---- LOOP @for: bangkitkan skala spasi --spacing-1 s/d --spacing-12
+    // (kelipatan 4px) sehingga semua komponen bisa memakai
+    // var(--spacing-N) alih-alih angka px yang di-hardcode ----
+    @for $i from 1 through v.$spacing-steps {
+        --spacing-#{$i}: #{$i * v.$spacing-unit};
+    }
+
+    --shadow: #{v.$shadow-light};
+    --radius: #{v.$radius};
+    --max-width: #{v.$max-width};
+}

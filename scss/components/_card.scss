@@ -1,0 +1,11 @@
+// =========================================
+// COMPONENTS / CARD
+// Kartu generik dipakai ulang di Pendidikan,
+// Hobi, dan bagian lain lewat mixin card-base.
+// =========================================
+
+@use "../abstracts/mixins" as m;
+
+.card {
+    @include m.card-base(var(--spacing-6)); // 24px
+}
